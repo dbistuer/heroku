@@ -1,0 +1,41 @@
+   venda   | factor 
+-----------+--------
+ al engros |   1.05
+ al detall |   1.12
+(2 rows)
+
+ id | nom  | nota 
+----+------+------
+  1 | JAVA |    8
+(1 row)
+
+   venda   | factor 
+-----------+--------
+ al engros |   1.05
+ al detall |   1.12
+(2 rows)
+
+ empresa  | clau |  preu  
+----------+------+--------
+ Nacional |    1 |  30.82
+ Nacional |    2 |  32.73
+ Nacional |    3 | 202.25
+ Nacional |    5 |   9.76
+ Nacional |    6 |  31.52
+ Nacional |    7 |  58.41
+ Nacional |   10 |  64.38
+ Patito   |    1 |   30.4
+ Patito   |    2 |  33.63
+ Patito   |    3 | 195.59
+ Patito   |    5 |   9.78
+ Patito   |    6 |  32.44
+ Patito   |    7 |  59.99
+ Patito   |   10 |  62.02
+ Tecnok   |    3 | 198.34
+ Tecnok   |    5 |   9.27
+ Tecnok   |    6 |  34.85
+ Tecnok   |    7 |  59.95
+ Tecnok   |   10 |  61.22
+ Tecnok   |   12 |  62.29
+(20 rows)
+

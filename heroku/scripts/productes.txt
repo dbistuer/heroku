@@ -1,0 +1,8 @@
+    part     |  tipus  | especificacio | psuggerit | clau 
+-------------+---------+---------------+-----------+------
+ Processador | 2GHz    | 32 bits       |           |    1
+ Processador | 2.4 GHz | 32 bits       |        35 |    2
+ Processador | 1.7 GHz | 64 bits       |       205 |    3
+ Processador | 3 GHz   | 64 bits       |       560 |    4
+(4 rows)
+
