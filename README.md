@@ -70,7 +70,7 @@
 
 > Un cop logegat clico a ‘create new app’
 
-![entroHeroki](\heroku\img\entroHeroki.PNG)
+![entroHeroki](heroku\img\entroHeroki.PNG)
 
 
 
