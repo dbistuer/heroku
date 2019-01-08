@@ -525,11 +525,11 @@ Per què seveix la instrucció `\! pwd` ? Per que pot ser útil ?
 
 > I ja tenim el pgamin executantse al nostre ubuntu 18.04
 
-![43](img\43.png)
+![43](img/43.png)
 
 
 
 Link utilitzat:
 
-[Instal·lacio PgAtmin4 Ubuntu18.04](<https://linuxhint.com/install-pgadmin4-ubuntu/>)
+[Instal·lacio PgAdmin4 Ubuntu18.04](<https://linuxhint.com/install-pgadmin4-ubuntu/>)
 
