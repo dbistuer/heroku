@@ -70,19 +70,19 @@
 
 > Un cop logegat clico a ‘create new app’
 
-![entroHeroki](img/entroHeroki.png)
+![entroHeroki](img/entroHeroki.PNG)
 
 
 
 >Aquest em demane un nom per la app i una regio i clico a crear.
 
-![creoApp](img/creoApp.png)
+![creoApp](img/creoApp.PNG)
 
 
 
 >Un cop creada vaig a ‘Configurea add-ons’ per a afegira la base de dades
 
-![addons](img/addons.png)
+![addons](img/addons.PNG)
 
 >Selecciono l’opcio ‘Hobby Dev -Free’
 
@@ -163,40 +163,40 @@ De nou comproveu la connexió i mireu les taules i podeu crear una 					taula o 
 >Primer s'ha de descarregar el programa de la pagina pgadmin.org, jo he
 >sel·leccionat la ultima versio d’aquest que es la 3.6
 
-![16](img/16.png)
+![16](img/16.PNG)
 
 >Un cop cliques al l’enllaç et porta a la seguent pagina on tens 3
 >fitxers 2 son de informacio i el arxiu .exe es l’executable que
 >necessitem nosaltres.
 
-![17](img/17.png)
+![17](img/17.PNG)
 
 >Un cop descarregat, l’instal·lacio es senzilla nomes s’ha de clicar
 >seguent tot el rato.
 
-![18](img/18.png)
+![18](img/18.PNG)
 
-![19](img/19.png)
+![19](img/19.PNG)
 
 
 
 > I un cop instal·lat l'executo
 
-![20](img/20.png)
+![20](img/20.PNG)
 
  
 
 >Tal i com ja hem fet avans, s’ha de posar el nom de la base de dades,
 >usuari, port, host i password.
 
-![21](img/21.png)
+![21](img/21.PNG)
 
 
 
 >I ja un cop clicat a guardar ja podrem accedir a la base de dades. Aquí
 >et monstruo un dels registres inserits a taules creades anteriorment.
 
-![22](img/22.png)
+![22](img/22.PNG)
 
 
 
@@ -204,18 +204,18 @@ De nou comproveu la connexió i mireu les taules i podeu crear una 					taula o 
 
    La carrega del fitxer sql al pgadmin es senzilla, simplement, s’ha de sel·leccionar la base de dades i al menu superior clicar a ‘tools’  i clicar l’opcio ‘query tool’ on s’et obrira la pagina seguent i clicant al l’icona de la carpeta que es pot veure a la part superior esquerra s’et obrira la pagina filla que es veu damunt on simplement li has de passar el path de on tens el fitxer per a sel·leccionarlo i carregar-lo.
 
-   ![23](img/23.png)
+   ![23](img/23.PNG)
 
 >Un cop carregat s’et obre com si fos un query que haguessis escrit
 >alli i simlemnt s’executa 
 
-![24](img/24.png)
+![24](img/24.PNG)
 
 >I aquí et monstro que ha anat tot be perque al fer el select de la
 >taula que no existie avans de la carrega del fitxer i els registres
 >que tampoc existien hi son.
 
-![25](img/25.png)
+![25](img/25.PNG)
 
 Per importar fitxers .sql amb una seqüència d’instruccions sql es pot
 fer de dues formes diferents. Des de el nostre sistema utilitzant l’ordre
