@@ -66,11 +66,11 @@
  
 
 
-3. Anem a configurar la nostra base de dades a Heroku. Aneu a Heroku  https://www.heroku.com/postgres- HEROKU! [HEROKU](<https://www.heroku.com/postgres>) .Heu de cerar un compte amb el pla gratuït, instal.lar o crear una aplicació ( des de el Dashboard ) i després heu de crear una base de dades ( en les propietats de la vostra app heu d’afegir l’add-on Heroku Postgres :: Database triant el pla gratuït Hobby Free.
+3. Anem a configurar la nostra base de dades a Heroku. Aneu a Heroku   [HEROKU](<https://www.heroku.com/postgres>) .Heu de cerar un compte amb el pla gratuït, instal.lar o crear una aplicació ( des de el Dashboard ) i després heu de crear una base de dades ( en les propietats de la vostra app heu d’afegir l’add-on Heroku Postgres :: Database triant el pla gratuït Hobby Free.
 
 > Un cop logegat clico a ‘create new app’
 
-![entroHeroki](\img\entroHeroki.PNG)
+![entroHeroki](/img/entroHeroki.PNG)
 
 
 
@@ -237,7 +237,7 @@ Per què seveix la instrucció `\! pwd` ? Per que pot ser útil ?
 >per aexectura una comanda dins del servidor. Per a la carrega de
 >arxius .sql desde path relatiu.
 
-![28](\img\28.png)
+![28](/img/28.png)
 
 4. Instruccions psql
 
