@@ -525,7 +525,7 @@ Per què seveix la instrucció `\! pwd` ? Per que pot ser útil ?
 
 > I ja tenim el pgamin executantse al nostre ubuntu 18.04
 
-![43](heroku/img/43.PNG)
+![43](heroku/img/43.png)
 
 
 
