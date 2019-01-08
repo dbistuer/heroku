@@ -1,7 +1,7 @@
  L’objectiu general d’aquesta activitat és conèixer i configurar diverses eines per treballar amb el SGBD Postgresql instal.lat en la pràctica anterior. Conèixer el funcionament de Postgresql com a servei utilitzant la plataforma gratuïta Heroku. Així com practicar diverses ordres d’utilitat en la consola.
 
  
-  
+
 
 1. Configurar aplicació i compte Heroku
      1. Coneixeu què és una Plataforma de Servei( Paas) al núvol ? Expliqueu breument el concepte i la utilitat:
@@ -19,8 +19,52 @@
 
    2. Ens centrarem en la Plataforma Heroku ja que té un pla gratuït que només cal registar-se i és una de les plataformes més utilitzades darrere de AWS i Google App Engine. A més te suport per les bases de dades Postgres. Expliqueu característiques i beneficis de la plataforma Heroku.
 
+>  Heroku és un dels PAAS més utilitzats en l'actualitat en entorns empresarials per la seva forta enfocament en resoldre el desplegament d'una aplicació. A més et permet gestionar els servidors i les seves configuracions, escalament i l'administració. A Heroku només li dius quin llenguatge de backend estàs utilitzant o quina base de dades vas a utilitzar i et preocupes únicament pel desenvolupament de la teva aplicació.
+>
+>  No té servidors propis, sinó que els contracta del núvol EC2 d'Amazon i, una mica a la manera d'Apple, ofereix conveniència a canvi de restringir opcions de desenvolupament. Mentre que Amazon EC2 és una plataforma totalment oberta que només abstreu el maquinari, però el programador controla des del sistema operatiu fins al llenguatge que vol fer servir, Heroku decideix i gestiona el sistema operatiu (Debian), els servidors (Nginix, Varnish i Thin per proxy invers, la memòria cau i servidor d'aplicacions Ruby, respectivament), i també ofereix un menú selecte d'opcions per a programar en Ruby: pots pujar qualsevol codi que faci servir rack, però recomanen les seves pròpies "gemmes" o paquets nadius de Ruby. Ara que djangy i Stable anuncien el mateix tipus de serveis per als programadors en Python
+
  
-  
+
+> Avantatges:
+>
+>  Lliurament ràpid d'aplicacions, cicles curts
+>
+> La plataforma Heroku us permetrà crear i implementar aplicacions ràpidament. Ja sigui que estigueu treballant en un projecte personal o en un producte de l'empresa, Heroku us ajuda a protegir ràpidament idees noves, a crear noves funcions o a oferir noves aplicacions a la producció i més enllà.
+>
+> Plataforma políglota
+>
+> Heroku és flexible i s'adapta al vostre estil de desenvolupament. La plataforma suporta oficialment vuit idiomes i marcs de desenvolupament populars. Heroku Buildpacks estén el sistema de compilació per suportar idiomes o personalitzacions addicionals.
+>
+> DevOps simplificat
+>
+> Amb una plataforma totalment gestionada, el personal d'Heroku supervisa els temps d'activitat, el rendiment i la infraestructura, alliberant-vos de la distracció de configurar i gestionar els vostres propis servidors i operacions de maquinari.
+>
+> Executeu aplicacions de manera gratuïta
+>
+> Una varietat de serveis gratuïts a Heroku us pot ajudar a experimentar, a jugar o a provar idees noves amb els vostres usuaris. Registrar-se amb Heroku us ofereix un grup d'hores de dino per utilitzar-les a les vostres aplicacions. Molts dels nostres proveïdors de complements també ofereixen serveis gratuïts.
+>
+> Serveis de dades integrats
+>
+> Els serveis de dades administrats d'Heroku estan optimitzats per als desenvolupadors, cosa que facilita encara més la creació d'aplicacions basades en dades. Trieu Heroku Postgres, Heroku Redis i Apache Kafka a Heroku o serveis addicionals de tercers.
+>
+> Ecosistema de serveis complementaris
+>
+> Creeu aplicacions més ràpidament estenent la plataforma Heroku amb els serveis de núvol totalment gestionats que es poden instal·lar amb un sol clic. Més de 150 complements de Heroku són compatibles amb totes les etapes del desenvolupament i l'operació de l'aplicació.
+>
+> Escalabilitat sense problemes
+>
+> Una vegada que la vostra aplicació guanyi tracció amb els usuaris, podeu escalar els recursos de l'aplicació amb un sol clic o una ordre utilitzant el Tauler d'eines Heroku o CLI. La característica d'autocompressió de la plataforma permet que les vostres aplicacions s'incrementin o baixin de manera instantània quan sigui necessari.
+>
+> Documentació i suport
+>
+> El Heroku Dev Center ofereix una gran quantitat d'informació, incloent documents de referència tècnics, guies per a començar per idioma, recursos d'aprenentatge, registre de canvis, i molt més. A més, Heroku ofereix una varietat d'opcions de suport per a l'assistència personalitzada. També ens sentim orgullosos d'escriure el manifest d'aplicació de dotze factors.
+>
+> Col·laboració en equip
+>
+> Heroku Teams ofereix espais de treball per a aplicacions compartides i eines centralitzades per gestionar l'equip, els processos i la facturació del projecte d'aplicació. Heroku Flow proporciona eines de col·laboració i fluxos de treball per donar suport al vostre lliurament continu i pràctiques d'integració contínua.
+
+ 
+
 
 3. Anem a configurar la nostra base de dades a Heroku. Aneu a Heroku  https://www.heroku.com/postgres- HEROKU! [HEROKU](<https://www.heroku.com/postgres>) .Heu de cerar un compte amb el pla gratuït, instal.lar o crear una aplicació ( des de el Dashboard ) i després heu de crear una base de dades ( en les propietats de la vostra app heu d’afegir l’add-on Heroku Postgres :: Database triant el pla gratuït Hobby Free.
 
@@ -53,7 +97,7 @@
    ![5](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\5.png)
 
  Nota: recordeu primer heu de crear una aplicació i després instal.lar l’addon base de dades Postgres.
-  
+
 
 2. Connectar-nos a la nostra base de dades
 
@@ -207,7 +251,7 @@ Per què seveix la instrucció `\! pwd` ? Per que pot ser útil ?
 
       ![27](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\27.png)
 
-2. Formats de sortida:
+5. Formats de sortida:
 
    1. Especificant directament el fitxer destí al finalitzar una sentencia:
 
@@ -265,148 +309,173 @@ Per què seveix la instrucció `\! pwd` ? Per que pot ser útil ?
 
       ![36](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\36.png)
 
-       
+   ​    
 
       `\pset parameter [ value ]`
 
-       
+   ​    
 
        This command sets options affecting the output of query result tables. parameter describes which option is to be set. The semantics of value depend thereon.
 
-       
+
+   ​    
 
        Adjustable printing options are:
 
-       
+
+   ​    
 
        `format`
 
-       
+
+   ​    
 
        Sets the output format to one of unaligned , aligned , html , latex , or troff-ms . Unique abbreviations are allowed. (That would mean one letter is enough.)
 
-       
+
+   ​    
 
        "Unaligned" writes all columns of a row on a line, separated by the currently active field separator. This is intended to create output that might be intended to be read in by other programs(tab-separated, comma-separated). "Aligned" mode is the standard, human-readable, nicely formatted text output that is default. The "HTML" and "LaTeX" modes put out tables that are intended to be included in documents using the respective mark-up language. They are not
-
+       
        complete documents! (This might not be so dramatic in HTML, but in LaTeX you must have a complete document wrapper.)
 
-       
+
+   ​    
 
        `border`
 
-       
+
+   ​    
 
        The second argument must be a number. In general, the higher the number the more borders and lines the tables will have, but this depends on the particular format. In HTML mode, this will translate directly into the border=... attribute, in the others only values 0 (no border), 1 (internal dividing lines), and 2 (table frame) make sense.
 
-       
+
+   ​    
 
        expanded (or x )
 
-       
+
+   ​    
 
        You can specify an optional second argument, if it is provided it may be either on or off which will enable or disable expanded mode. If the second argument is not provided then we will toggle between regular and expanded format. When expanded format is enabled, query results are displayed in two columns, with the column name on the left and the data on the right. This mode is useful if the data wouldn't fit on the screen in the normal "horizontal" mode.
 
-       
+
+   ​    
 
        Expanded mode is supported by all four output formats.
 
-       
+
+   ​    
 
       `null`
 
        The second argument is a string that should be printed whenever a column is null. The default is not to print anything, which can easily be mistaken for, say, an empty string. Thus, one might choose to write \pset null '(null)' .
 
-       
+
+   ​    
 
       `fieldsep`
 
-       
+   ​    
 
        Specifies the field separator to be used in unaligned output mode. That way one can create, for example, tab- or comma-separated output, which other programs might prefer. To set a tab as field separator, type \pset fieldsep '\t' . The default field separator is '|' (a vertical bar).
 
-       
+
+   ​    
 
        `footer`
 
-       
+
+   ​    
 
        You can specify an optional second argument, if it is provided it may be either on or off which will enable or disable display of the default footer (x rows) . If the second argument is not provided then we will toggle between on and off.
-        
+
 
        `numericlocale`
 
-       
+
+   ​    
 
        You can specify an optional second argument, if it is provided it may be either on or off which will enable or disable display of a locale-aware character to seperate groups of digits to the left of the decimal marker. If the second argument is not provided then we will toggle between on and off.
 
-       
+
+   ​    
 
        `recordsep`
 
-       
+
+   ​    
 
        Specifies the record (line) separator to use in unaligned output mode. The default is a newline character.
 
-       
+
+   ​    
 
        `tuples_only (or t )`
 
-       
+
+   ​    
 
        You can specify an optional second argument, if it is provided it may be either on or off which will enable or disable the tuples only mode. If the second argument is not provided then we will toggle between tuples only and full display. Full display shows extra information such as column headers, titles, and various footers. In tuples only mode, only actual table data is shown.
 
-        
+
+   ​     
 
        `title [ text ]`
-        
+
 
        Sets the table title for any subsequently printed tables. This can be used to give your output descriptive tags. If no argument is given, the title is unset.
 
-       
+
+   ​    
 
        tableattr (or T ) [ text ]
 
-       
+
+   ​    
 
        Allows you to specify any attributes to be placed inside the HTML table tag. This could for example be cellpadding or bgcolor . Note that you probably don't want to specify border here, as that is already taken care of by \pset border .
-        
+
 
        `pager`
 
 
 
        Controls use of a pager for query and psql help output. If the environment variable PAGER is set, the output is piped to the specified program. Otherwise a platform-dependent default (such as more ) is used. When the pager is off, the pager is not used.  
-
+    
        When the pager is on, the pager is used only when appropriate, i.e. the output is to a terminal and will not fit on the screen. (psql does not do a perfect job of estimating when to use the pager.) \pset pager turns the pager on and off. Pager can also be set to always , which causes the pager to be always used, or you can set the pager to on which will enable the usage of the pager when appropriate, or you can set the pager to off which will disable the pager.
 
 
 
       4. Combinar els apartats anteriors. Canviant format de sortida i sortida.
 
-       
+
+​       
 
       5. Per que serveixen les orders ( des de consola de postgres):
-
+    
          `\l`
-
+    
           `\d` : Ficar només `\d` i `\d nom_taula ( ex: proveidors)`. L'ordre `\d` és útil per mostrar informació sobre l'SGBD: taules, índexs,
 
-       
+
+​       
 
       6. Creeu una base de dades nova : provaAlmata.
 
 
 
       7. Us podeu conectar des de consola a la nova base de dades.
-
+    
          `\c provaAlmata`
 
-       
+
+​       
 
       8. Mireu els usuaris : \du. Quin son ? Tenen alguna similitut amb els vostres usuaris de la vostra base de dades ¿
 
-       
+
+​       
 
       9. Torneu a la vostra base de dades.
 
@@ -419,20 +488,20 @@ Per què seveix la instrucció `\! pwd` ? Per que pot ser útil ?
       Aneu a la página web: [Pgadmin](<https://www.pgadmin.org/>)
         
       1. En un entorn Windows ( ja sigui el vostre ordinador o una màquina virtual amb qualsevol sistema Windows ): Aneu a la secció Downloads i seguiu les instruccions. Un cop instal.lat connecteu a la vostra Base de Dades Heroku. Mirar les taules i executeu algún script.
-
+    
          > Ja ho pots veure al punt 3 de la seccio connectarnos a la base de dades com ho he fet i funciona correctament.
-
+    
       2. Opcional: instal.lar en un sistema Ubunut Linux. Us recomano
          fer-ho en una màquina virtual o feu abans un snapshot. Poden tocar coses que després no es puguin recuperar. Seguint les instruccions:
-
+    
          [Instal·lacio pgadmin4 ubuntu16.04](<http://proyectosbeta.net/2016/10/instalar-pgadmin4-en-ubuntu-16-04-lts/>)
-
+    
          >Instalació ubuntu 18.04 pgadmin4:
-
+    
          > Primer hauriem d'executar la seguent commanda per a instal·lar els paquets necessaris:
-
+    
          ![37](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\37.png)
-
+    
          > Despres crearem la carperta on executarem l’instalacio i crearem un entorn:
 
 ![38](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\38.png)
