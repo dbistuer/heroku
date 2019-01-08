@@ -1,0 +1,466 @@
+ L’objectiu general d’aquesta activitat és conèixer i configurar diverses eines per treballar amb el SGBD Postgresql instal.lat en la pràctica anterior. Conèixer el funcionament de Postgresql com a servei utilitzant la plataforma gratuïta Heroku. Així com practicar diverses ordres d’utilitat en la consola.
+
+ 
+  
+
+1. Configurar aplicació i compte Heroku
+     1. Coneixeu què és una Plataforma de Servei( Paas) al núvol ? Expliqueu breument el concepte i la utilitat:
+
+        > Plataforma com a servei (PAAS) és un entorn de desenvolupament i implementació complet en el núvol, amb recursos que permeten lliurar tot, des d'aplicacions senzilles basades en el núvol fins a aplicacions empresarials sofisticades habilitades per al núvol. Vostè li compra els recursos que necessita a un proveïdor de serveis en el núvol, als quals s'accedeix a través d'una connexió segura a Internet,
+        > però només paga per l'ús que fa d'ells.
+        >
+        >
+        >
+        > Igual que IaaS, PAAS inclou infraestructura (servidors, emmagatzematge i xarxes), però també inclou middleware, eines de desenvolupament, serveis d'intel·ligència empresarial (BI), sistemes d'administració de bases de dades, etc. PAAS està dissenyat per sustentar el cicle de vida complet de les aplicacions web: compilació, proves, implementació, administració i actualització.
+        >
+        >  
+        >
+        >  PAAS permet evitar la despesa i la complexitat que suposen la compra i l'administració de llicències de programari, la infraestructura d'aplicacions i el middleware subjacents, les eines de desenvolupament i altres recursos. Vostè administra les aplicacions i els serveis que desenvolupa i, normalment, el proveïdor de serveis en el núvol administra tota la resta.
+
+   2. Ens centrarem en la Plataforma Heroku ja que té un pla gratuït que només cal registar-se i és una de les plataformes més utilitzades darrere de AWS i Google App Engine. A més te suport per les bases de dades Postgres. Expliqueu característiques i beneficis de la plataforma Heroku.
+
+ 
+  
+
+3. Anem a configurar la nostra base de dades a Heroku. Aneu a Heroku  https://www.heroku.com/postgres- HEROKU! [HEROKU](<https://www.heroku.com/postgres>) .Heu de cerar un compte amb el pla gratuït, instal.lar o crear una aplicació ( des de el Dashboard ) i després heu de crear una base de dades ( en les propietats de la vostra app heu d’afegir l’add-on Heroku Postgres :: Database triant el pla gratuït Hobby Free.
+
+> Un cop logegat clico a ‘create new app’
+
+![entroHeroki](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\entroHeroki.PNG)
+
+
+
+>Aquest em demane un nom per la app i una regio i clico a crear.
+
+![creoApp](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\creoApp.PNG)
+
+
+
+>Un cop creada vaig a ‘Configurea add-ons’ per a afegira la base de dades
+
+![addons](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\addons.PNG)
+
+>Selecciono l’opcio ‘Hobby Dev -Free’
+
+![3](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\3.png)
+
+>I ja tinc la meva base de dades postgres
+
+![4](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\4.png)
+
+4. Al final us quedarà alguna cosa semblant a:
+
+   ![5](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\5.png)
+
+ Nota: recordeu primer heu de crear una aplicació i després instal.lar l’addon base de dades Postgres.
+  
+
+2. Connectar-nos a la nostra base de dades
+
+   Provarem diferents vies per comunicar-nos amb la nostra base de dades. Primer de tot em de tindre molt clar les credencials de la nostra base de dades ( aquestes dades ens permetran comunicar-nos amb ella des de qualsevol lloc. Les trobareu en la base de dades, Settings i Database Credentials. Trobeu en la imatge un exemple del que us ha de sortir.
+
+   Utilitzarem aquestes dades per connectar-nos.
+
+   1. Des de la consola del nostre terminal: Utilitzant la instrucció ( substituint els valors corresponents pels de la nostra base de dades):
+
+      `$psql -h myhost -d mydb -U myuser`
+
+       ( si no us demanen el password pot ser que utilitzeu : `psql -h myhost -d mydb -U myuser -W`)
+
+       Proveu que us heu connectat mirant les taules que hi ha i les bases de dades. Proveu de crear una taula i inserir algunes dades.
+
+      > Em conecto a la base de dades de Heroku
+
+![7](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\7.png)
+
+> Creo una taula a la base de dades
+
+![8](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\8.png)
+
+>Insereixo dades a la taula i les monstro per terminal
+
+![9](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\9.png)
+
+2. Des del programa pgAdmin3. Per aix`heu d’instl.lar el programa amb la instrucció:
+
+ 	`$ sudo apt-get install pgadmin3`
+
+![10](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\10.png)
+
+​	En la configuracio aneu Add connection to a server ( representat a la
+​	toolbar amb un endoll). I a les propietats heu d’omplir els camps
+​	de forma adient. Us ha de quedar alguna cosa semblant a:
+
+![11](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\11.png)
+
+De nou comproveu la connexió i mireu les taules i podeu crear una 					taula o inserir algun element.
+
+>Miro la taula creada per terminal
+
+![12](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\12.png)
+
+> Creo una nova taula
+
+![13](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\13.png)
+
+
+
+>Insereixo dades a la taula creada anteriorment
+
+![14](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\14.png)
+
+>Mostro les dades inserides a la taula creada per pgadmin3
+
+![15](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\15.png)
+
+3. Pgadmin3 es troba desfasat i fa un any va sortir la versió 4.
+   Proveu d’instal.lar en un sistema Windows i proveu com funciona.
+
+>Primer s'ha de descarregar el programa de la pagina pgadmin.org, jo he
+>sel·leccionat la ultima versio d’aquest que es la 3.6
+
+![16](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\16.PNG)
+
+>Un cop cliques al l’enllaç et porta a la seguent pagina on tens 3
+>fitxers 2 son de informacio i el arxiu .exe es l’executable que
+>necessitem nosaltres.
+
+![17](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\17.PNG)
+
+>Un cop descarregat, l’instal·lacio es senzilla nomes s’ha de clicar
+>seguent tot el rato.
+
+![18](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\18.PNG)
+
+![19](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\19.PNG)
+
+
+
+> I un cop instal·lat l'executo
+
+![20](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\20.PNG)
+
+ 
+
+>Tal i com ja hem fet avans, s’ha de posar el nom de la base de dades,
+>usuari, port, host i password.
+
+![21](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\21.PNG)
+
+
+
+>I ja un cop clicat a guardar ja podrem accedir a la base de dades. Aquí
+>et monstruo un dels registres inserits a taules creades anteriorment.
+
+![22](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\22.PNG)
+
+
+
+3.  Carregar un fitxer .sql
+
+   La carrega del fitxer sql al pgadmin es senzilla, simplement, s’ha de sel·leccionar la base de dades i al menu superior clicar a ‘tools’  i clicar l’opcio ‘query tool’ on s’et obrira la pagina seguent i clicant al l’icona de la carpeta que es pot veure a la part superior esquerra s’et obrira la pagina filla que es veu damunt on simplement li has de passar el path de on tens el fitxer per a sel·leccionarlo i carregar-lo.
+
+   ![23](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\23.PNG)
+
+>Un cop carregat s’et obre com si fos un query que haguessis escrit
+>alli i simlemnt s’executa 
+
+![24](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\24.PNG)
+
+>I aquí et monstro que ha anat tot be perque al fer el select de la
+>taula que no existie avans de la carrega del fitxer i els registres
+>que tampoc existien hi son.
+
+![25](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\25.PNG)
+
+Per importar fitxers .sql amb una seqüència d’instruccions sql es pot
+fer de dues formes diferents. Des de el nostre sistema utilitzant l’ordre
+
+`$psql postgres -f arxiu.psql ( on postgres es el nom del bd a executar el fitxer arxiu.sql)`
+
+I des-de dintre del nostre SGBD utilitzant la comanda `\i nom_fitxer.psql` :
+
+Heu de copiar i inserir ( Bases de dades) les pàgines de 22 i 23. Per
+això primer heu de copiar i crear un fitxer .sql amb les instruccions. Executeu el fitxer d’alguna de les formes que hem vist. Axí tindreu les taules productes, proveidors, preus i guanys amb alguns registres.
+
+
+
+![26](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\26.png)
+
+Per què seveix la instrucció `\! pwd` ? Per que pot ser útil ?
+
+>Et diu el directori en el que estas situat, la comnda `\!` serveix
+>per aexectura una comanda dins del servidor. Per a la carrega de
+>arxius .sql desde path relatiu.
+
+![28](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\28.png)
+
+4. Instruccions psql
+
+   Llegiu la documentació de L’IOC ( Bases de dades) les pàgines de 20-25. Entreu a la consola d’una base de dades Postgres.
+
+   1. Executeu l’ordre i expliqeu el significat de cada variable.
+
+      `\echo :DBNAME :ENCODING :HOST :PORT :USER ;`
+
+      >Aquesta comanda et diu: El nom de la base de dades, la codificacio de aquesta, el nom del host de la base de dades, el port de la base de dades i l’usuari amb el qual s’ha entrat a aquesta
+
+      ![27](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\27.png)
+
+2. Formats de sortida:
+
+   1. Especificant directament el fitxer destí al finalitzar una sentencia:
+
+      Ex: `select * from productes where part = “Processador” \g /your_path.../productes.txt`
+
+      ![29](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\29.png)
+
+   2. Mitjançant ordre \o: indicant la sortida de sentències d’ara endavant. ( tornar a executar \o per la sortida estandar)
+
+       Ex: `\o /your_path/prova.txt`
+
+       Diverses instruccions que la seva sortida serà al prova.txt
+
+       `\o`
+
+       Tornem a la sortida estandar ( normal per pantalla).
+
+       Feu al menys 3 proves canviant la sortida ( fitxer, sortida estandar)
+
+      >Aquest, afegeix cada consuta a un fitxer que tu defineixes.
+
+      ![30](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\30.png)
+
+      >  I aquest es el fitxer definit al qual es van afegint.
+
+      ![31](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\31.png)
+
+   3. Especificar formats de sortida amb l’ordre pset. Els formats de sortida són aligned, unaligned, html i làtex ( especial interès aquests dos darrers).
+
+       Ex: `\pset format html`
+
+       ( per defecte heu de tornar al format aligned)
+
+       Feu al menys 5 proves canviant el format de sortida. Podeu utilitzar diferents paràmetres de format taula, border, camp separador etc...
+
+      Feu al menys 5 proves canviant el format de sortida.
+
+      > Format html:
+
+      ![32](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\32.png)
+
+      > Format latex:
+
+      ![33](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\33.png)
+
+      > Format unaligned: 
+
+      ![34](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\34.png)
+
+      > Format aligned: 
+
+      ![35](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\35.png)
+
+      > Format wrapped :
+
+      ![36](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\36.png)
+
+       
+
+      `\pset parameter [ value ]`
+
+       
+
+       This command sets options affecting the output of query result tables. parameter describes which option is to be set. The semantics of value depend thereon.
+
+       
+
+       Adjustable printing options are:
+
+       
+
+       `format`
+
+       
+
+       Sets the output format to one of unaligned , aligned , html , latex , or troff-ms . Unique abbreviations are allowed. (That would mean one letter is enough.)
+
+       
+
+       "Unaligned" writes all columns of a row on a line, separated by the currently active field separator. This is intended to create output that might be intended to be read in by other programs(tab-separated, comma-separated). "Aligned" mode is the standard, human-readable, nicely formatted text output that is default. The "HTML" and "LaTeX" modes put out tables that are intended to be included in documents using the respective mark-up language. They are not
+
+       complete documents! (This might not be so dramatic in HTML, but in LaTeX you must have a complete document wrapper.)
+
+       
+
+       `border`
+
+       
+
+       The second argument must be a number. In general, the higher the number the more borders and lines the tables will have, but this depends on the particular format. In HTML mode, this will translate directly into the border=... attribute, in the others only values 0 (no border), 1 (internal dividing lines), and 2 (table frame) make sense.
+
+       
+
+       expanded (or x )
+
+       
+
+       You can specify an optional second argument, if it is provided it may be either on or off which will enable or disable expanded mode. If the second argument is not provided then we will toggle between regular and expanded format. When expanded format is enabled, query results are displayed in two columns, with the column name on the left and the data on the right. This mode is useful if the data wouldn't fit on the screen in the normal "horizontal" mode.
+
+       
+
+       Expanded mode is supported by all four output formats.
+
+       
+
+      `null`
+
+       The second argument is a string that should be printed whenever a column is null. The default is not to print anything, which can easily be mistaken for, say, an empty string. Thus, one might choose to write \pset null '(null)' .
+
+       
+
+      `fieldsep`
+
+       
+
+       Specifies the field separator to be used in unaligned output mode. That way one can create, for example, tab- or comma-separated output, which other programs might prefer. To set a tab as field separator, type \pset fieldsep '\t' . The default field separator is '|' (a vertical bar).
+
+       
+
+       `footer`
+
+       
+
+       You can specify an optional second argument, if it is provided it may be either on or off which will enable or disable display of the default footer (x rows) . If the second argument is not provided then we will toggle between on and off.
+        
+
+       `numericlocale`
+
+       
+
+       You can specify an optional second argument, if it is provided it may be either on or off which will enable or disable display of a locale-aware character to seperate groups of digits to the left of the decimal marker. If the second argument is not provided then we will toggle between on and off.
+
+       
+
+       `recordsep`
+
+       
+
+       Specifies the record (line) separator to use in unaligned output mode. The default is a newline character.
+
+       
+
+       `tuples_only (or t )`
+
+       
+
+       You can specify an optional second argument, if it is provided it may be either on or off which will enable or disable the tuples only mode. If the second argument is not provided then we will toggle between tuples only and full display. Full display shows extra information such as column headers, titles, and various footers. In tuples only mode, only actual table data is shown.
+
+        
+
+       `title [ text ]`
+        
+
+       Sets the table title for any subsequently printed tables. This can be used to give your output descriptive tags. If no argument is given, the title is unset.
+
+       
+
+       tableattr (or T ) [ text ]
+
+       
+
+       Allows you to specify any attributes to be placed inside the HTML table tag. This could for example be cellpadding or bgcolor . Note that you probably don't want to specify border here, as that is already taken care of by \pset border .
+        
+
+       `pager`
+
+
+
+       Controls use of a pager for query and psql help output. If the environment variable PAGER is set, the output is piped to the specified program. Otherwise a platform-dependent default (such as more ) is used. When the pager is off, the pager is not used.  
+
+       When the pager is on, the pager is used only when appropriate, i.e. the output is to a terminal and will not fit on the screen. (psql does not do a perfect job of estimating when to use the pager.) \pset pager turns the pager on and off. Pager can also be set to always , which causes the pager to be always used, or you can set the pager to on which will enable the usage of the pager when appropriate, or you can set the pager to off which will disable the pager.
+
+
+
+      4. Combinar els apartats anteriors. Canviant format de sortida i sortida.
+
+       
+
+      5. Per que serveixen les orders ( des de consola de postgres):
+
+         `\l`
+
+          `\d` : Ficar només `\d` i `\d nom_taula ( ex: proveidors)`. L'ordre `\d` és útil per mostrar informació sobre l'SGBD: taules, índexs,
+
+       
+
+      6. Creeu una base de dades nova : provaAlmata.
+
+
+
+      7. Us podeu conectar des de consola a la nova base de dades.
+
+         `\c provaAlmata`
+
+       
+
+      8. Mireu els usuaris : \du. Quin son ? Tenen alguna similitut amb els vostres usuaris de la vostra base de dades ¿
+
+       
+
+      9. Torneu a la vostra base de dades.
+
+
+
+   5. Instal.lar pgAdmin4
+
+
+
+      Aneu a la página web: [Pgadmin](<https://www.pgadmin.org/>)
+        
+      1. En un entorn Windows ( ja sigui el vostre ordinador o una màquina virtual amb qualsevol sistema Windows ): Aneu a la secció Downloads i seguiu les instruccions. Un cop instal.lat connecteu a la vostra Base de Dades Heroku. Mirar les taules i executeu algún script.
+
+         > Ja ho pots veure al punt 3 de la seccio connectarnos a la base de dades com ho he fet i funciona correctament.
+
+      2. Opcional: instal.lar en un sistema Ubunut Linux. Us recomano
+         fer-ho en una màquina virtual o feu abans un snapshot. Poden tocar coses que després no es puguin recuperar. Seguint les instruccions:
+
+         [Instal·lacio pgadmin4 ubuntu16.04](<http://proyectosbeta.net/2016/10/instalar-pgadmin4-en-ubuntu-16-04-lts/>)
+
+         >Instalació ubuntu 18.04 pgadmin4:
+
+         > Primer hauriem d'executar la seguent commanda per a instal·lar els paquets necessaris:
+
+         ![37](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\37.png)
+
+         > Despres crearem la carperta on executarem l’instalacio i crearem un entorn:
+
+![38](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\38.png)
+
+			> Seguidament entrarem a la carpeta que sens ha creat dins al crear letorn i l’activarem i descrregarem el pgadmin4 amb la seguent comanda.
+
+![39](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\39.png)
+
+>Un cop descarregat procedirtem al’instalacio amb la seguent comanda
+
+![40](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\40.png)
+
+> I a la seguent carpeta crearem l’arxiu de configuracio per a poder
+> executar el pgadmin4.
+
+![41](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\41.png)
+
+> I executarem la seguent comanda per a fer correr el pgadmin:
+
+![42](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\42.png)
+
+> I ja tenim el pgamin executantse al nostre ubuntu 18.04
+
+![43](C:\Users\dbistuer\Downloads\heroku\heroku-master\heroku\img\43.png)
+
+
+
+Link utilitzat:
+
+[Instal·lacio PgAtmin4 Ubuntu18.04](<https://linuxhint.com/install-pgadmin4-ubuntu/>)
+
