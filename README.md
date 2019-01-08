@@ -447,66 +447,67 @@ Per què seveix la instrucció `\! pwd` ? Per que pot ser útil ?
 
 
 
-      4. Combinar els apartats anteriors. Canviant format de sortida i sortida.
+4. Combinar els apartats anteriors. Canviant format de sortida i sortida.
 
 
-​       
+5. Per que serveixen les orders ( des de consola de postgres):
 
-      5. Per que serveixen les orders ( des de consola de postgres):
-    
-         `\l`
-    
-          `\d` : Ficar només `\d` i `\d nom_taula ( ex: proveidors)`. L'ordre `\d` és útil per mostrar informació sobre l'SGBD: taules, índexs,
+     `\l`
 
+     > Serveix per a veure el listat de bases de dades 
 
-​       
+     ![2-5](heroku/img/2-5.png)
 
-      6. Creeu una base de dades nova : provaAlmata.
+      `\d` : Ficar només `\d` i `\d nom_taula ( ex: proveidors)`. L'ordre `\d` és útil per mostrar informació sobre l'SGBD: taules, índexs,       
 
+     ![2-50](heroku/img/2-50.png)
 
-
-      7. Us podeu conectar des de consola a la nova base de dades.
-    
-         `\c provaAlmata`
+![2-51](heroku/img/2-51.png)
 
 
-​       
 
-      8. Mireu els usuaris : \du. Quin son ? Tenen alguna similitut amb els vostres usuaris de la vostra base de dades ¿
+6. Creeu una base de dades nova : provaAlmata.
 
+![2-6](heroku/img/2-6.png)
 
-​       
+7. Us podeu conectar des de consola a la nova base de dades.
 
-      9. Torneu a la vostra base de dades.
+     `\c provaAlmata`
 
+     ![2-7](heroku/img/2-7.png)
 
+8. Mireu els usuaris : \du. Quin son ? Tenen alguna similitut amb els vostres usuaris de la vostra base de dades ¿
+
+   ![](heroku/img/2-8.png)
+
+9. Torneu a la vostra base de dades.
+
+​    ![](heroku/img/2-9.png)
 
    5. Instal.lar pgAdmin4
 
+Aneu a la página web: [Pgadmin](<https://www.pgadmin.org/>)
+​    
+  1. En un entorn Windows ( ja sigui el vostre ordinador o una màquina virtual amb qualsevol sistema Windows ): Aneu a la secció Downloads i seguiu les instruccions. Un cop instal.lat connecteu a la vostra Base de Dades Heroku. Mirar les taules i executeu algún script.
 
+     > Ja ho pots veure al punt 3 de la seccio connectarnos a la base de dades com ho he fet i funciona correctament.
 
-      Aneu a la página web: [Pgadmin](<https://www.pgadmin.org/>)
-        
-      1. En un entorn Windows ( ja sigui el vostre ordinador o una màquina virtual amb qualsevol sistema Windows ): Aneu a la secció Downloads i seguiu les instruccions. Un cop instal.lat connecteu a la vostra Base de Dades Heroku. Mirar les taules i executeu algún script.
-    
-         > Ja ho pots veure al punt 3 de la seccio connectarnos a la base de dades com ho he fet i funciona correctament.
-    
-      2. Opcional: instal.lar en un sistema Ubunut Linux. Us recomano
-         fer-ho en una màquina virtual o feu abans un snapshot. Poden tocar coses que després no es puguin recuperar. Seguint les instruccions:
-    
-         [Instal·lacio pgadmin4 ubuntu16.04](<http://proyectosbeta.net/2016/10/instalar-pgadmin4-en-ubuntu-16-04-lts/>)
-    
-         >Instalació ubuntu 18.04 pgadmin4:
-    
-         > Primer hauriem d'executar la seguent commanda per a instal·lar els paquets necessaris:
-    
-         ![37](heroku/img/37.png)
-    
-         > Despres crearem la carperta on executarem l’instalacio i crearem un entorn:
+  2. Opcional: instal.lar en un sistema Ubunut Linux. Us recomano
+     fer-ho en una màquina virtual o feu abans un snapshot. Poden tocar coses que després no es puguin recuperar. Seguint les instruccions:
+
+     [Instal·lacio pgadmin4 ubuntu16.04](<http://proyectosbeta.net/2016/10/instalar-pgadmin4-en-ubuntu-16-04-lts/>)
+
+     >Instalació ubuntu 18.04 pgadmin4:
+
+     > Primer hauriem d'executar la seguent commanda per a instal·lar els paquets necessaris:
+
+     ![37](heroku/img/37.png)
+
+     > Despres crearem la carperta on executarem l’instalacio i crearem un entorn:
 
 ![38](heroku/img/38.png)
 
-			> Seguidament entrarem a la carpeta que sens ha creat dins al crear letorn i l’activarem i descrregarem el pgadmin4 amb la seguent comanda.
+> Seguidament entrarem a la carpeta que sens ha creat dins al crear letorn i l’activarem i descrregarem el pgadmin4 amb la seguent comanda.
 
 ![39](heroku/img/39.png)
 
