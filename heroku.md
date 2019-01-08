@@ -70,13 +70,13 @@
 
 > Un cop logegat clico a ‘create new app’
 
-![entroHeroki](img/entroHeroki.png)
+![entroHeroki](//img/entroHeroki.png)
 
 
 
 >Aquest em demane un nom per la app i una regio i clico a crear.
 
-![creoApp](img/creoApp.png)
+![creoApp](/img/creoApp.png)
 
 
 
