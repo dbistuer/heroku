@@ -70,19 +70,19 @@
 
 > Un cop logegat clico a ‘create new app’
 
-![entroHeroki](heroku/img/entroHeroki.png)
+![entroHeroki](heroku/img/entroHeroki.PNG)
 
 
 
 >Aquest em demane un nom per la app i una regio i clico a crear.
 
-![creoApp](heroku/img/creoApp.png)
+![creoApp](heroku/img/creoApp.PNG)
 
 
 
 >Un cop creada vaig a ‘Configurea add-ons’ per a afegira la base de dades
 
-![addons](heroku/img/addons.png)
+![addons](heroku/img/addons.PNG)
 
 >Selecciono l’opcio ‘Hobby Dev -Free’
 
@@ -163,40 +163,40 @@ De nou comproveu la connexió i mireu les taules i podeu crear una 					taula o 
 >Primer s'ha de descarregar el programa de la pagina pgadmin.org, jo he
 >sel·leccionat la ultima versio d’aquest que es la 3.6
 
-![16](heroku/img/16.png)
+![16](heroku/img/16.PNG)
 
 >Un cop cliques al l’enllaç et porta a la seguent pagina on tens 3
 >fitxers 2 son de informacio i el arxiu .exe es l’executable que
 >necessitem nosaltres.
 
-![17](heroku/img/17.png)
+![17](heroku/img/17.PNG)
 
 >Un cop descarregat, l’instal·lacio es senzilla nomes s’ha de clicar
 >seguent tot el rato.
 
-![18](heroku/img/18.png)
+![18](heroku/img/18.PNG)
 
-![19](heroku/img/19.png)
+![19](heroku/img/19.PNG)
 
 
 
 > I un cop instal·lat l'executo
 
-![20](heroku/img/20.png)
+![20](heroku/img/20.PNG)
 
  
 
 >Tal i com ja hem fet avans, s’ha de posar el nom de la base de dades,
 >usuari, port, host i password.
 
-![21](heroku/img/21.png)
+![21](heroku/img/21.PNG)
 
 
 
 >I ja un cop clicat a guardar ja podrem accedir a la base de dades. Aquí
 >et monstruo un dels registres inserits a taules creades anteriorment.
 
-![22](heroku/img/22.png)
+![22](heroku/img/22.PNG)
 
 
 
@@ -204,18 +204,18 @@ De nou comproveu la connexió i mireu les taules i podeu crear una 					taula o 
 
    La carrega del fitxer sql al pgadmin es senzilla, simplement, s’ha de sel·leccionar la base de dades i al menu superior clicar a ‘tools’  i clicar l’opcio ‘query tool’ on s’et obrira la pagina seguent i clicant al l’icona de la carpeta que es pot veure a la part superior esquerra s’et obrira la pagina filla que es veu damunt on simplement li has de passar el path de on tens el fitxer per a sel·leccionarlo i carregar-lo.
 
-   ![23](heroku/img/23.png)
+   ![23](heroku/img/23.PNG)
 
 >Un cop carregat s’et obre com si fos un query que haguessis escrit
 >alli i simlemnt s’executa 
 
-![24](heroku/img/24.png)
+![24](heroku/img/24.PNG)
 
 >I aquí et monstro que ha anat tot be perque al fer el select de la
 >taula que no existie avans de la carrega del fitxer i els registres
 >que tampoc existien hi son.
 
-![25](heroku/img/25.png)
+![25](heroku/img/25.PNG)
 
 Per importar fitxers .sql amb una seqüència d’instruccions sql es pot
 fer de dues formes diferents. Des de el nostre sistema utilitzant l’ordre
@@ -525,11 +525,11 @@ Per què seveix la instrucció `\! pwd` ? Per que pot ser útil ?
 
 > I ja tenim el pgamin executantse al nostre ubuntu 18.04
 
-![43](img\43.png)
+![43](img/43.PNG)
 
 
 
 Link utilitzat:
 
-[Instal·lacio PgAtmin4 Ubuntu18.04](<https://linuxhint.com/install-pgadmin4-ubuntu/>)
+[Instal·lacio PgAdmin4 Ubuntu18.04](<https://linuxhint.com/install-pgadmin4-ubuntu/>)
 
