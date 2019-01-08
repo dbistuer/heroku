@@ -66,35 +66,35 @@
  
 
 
-3. Anem a configurar la nostra base de dades a Heroku. Aneu a Heroku  https://www.heroku.com/postgres- HEROKU! [HEROKU](<https://www.heroku.com/postgres>) .Heu de cerar un compte amb el pla gratuït, instal.lar o crear una aplicació ( des de el Dashboard ) i després heu de crear una base de dades ( en les propietats de la vostra app heu d’afegir l’add-on Heroku Postgres :: Database triant el pla gratuït Hobby Free.
+3. Anem a configurar la nostra base de dades a Heroku. Aneu a Heroku   [HEROKU](<https://www.heroku.com/postgres>) .Heu de cerar un compte amb el pla gratuït, instal.lar o crear una aplicació ( des de el Dashboard ) i després heu de crear una base de dades ( en les propietats de la vostra app heu d’afegir l’add-on Heroku Postgres :: Database triant el pla gratuït Hobby Free.
 
 > Un cop logegat clico a ‘create new app’
 
-![entroHeroki](heroku\img\entroHeroki.PNG)
+![entroHeroki](heroku/img/entroHeroki.png)
 
 
 
 >Aquest em demane un nom per la app i una regio i clico a crear.
 
-![creoApp](\heroku\img\creoApp.PNG)
+![creoApp](heroku/img/creoApp.png)
 
 
 
 >Un cop creada vaig a ‘Configurea add-ons’ per a afegira la base de dades
 
-![addons](\heroku\img\addons.PNG)
+![addons](heroku/img/addons.png)
 
 >Selecciono l’opcio ‘Hobby Dev -Free’
 
-![3](\heroku\img\3.png)
+![3](heroku/img/3.png)
 
 >I ja tinc la meva base de dades postgres
 
-![4](\heroku\img\4.png)
+![4](heroku/img/4.png)
 
 4. Al final us quedarà alguna cosa semblant a:
 
-   ![5](\heroku\img\5.png)
+   ![5](heroku/img/5.png)
 
  Nota: recordeu primer heu de crear una aplicació i després instal.lar l’addon base de dades Postgres.
 
@@ -115,47 +115,47 @@
 
       > Em conecto a la base de dades de Heroku
 
-![7](\heroku\img\7.png)
+![7](heroku/img/7.png)
 
 > Creo una taula a la base de dades
 
-![8](\heroku\img\8.png)
+![8](heroku/img/8.png)
 
 >Insereixo dades a la taula i les monstro per terminal
 
-![9](\heroku\img\9.png)
+![9](heroku/img/9.png)
 
 2. Des del programa pgAdmin3. Per aix`heu d’instl.lar el programa amb la instrucció:
 
  	`$ sudo apt-get install pgadmin3`
 
-![10](\heroku\img\10.png)
+![10](heroku/img/10.png)
 
 ​	En la configuracio aneu Add connection to a server ( representat a la
 ​	toolbar amb un endoll). I a les propietats heu d’omplir els camps
 ​	de forma adient. Us ha de quedar alguna cosa semblant a:
 
-![11](\heroku\img\11.png)
+![11](heroku/img/11.png)
 
 De nou comproveu la connexió i mireu les taules i podeu crear una 					taula o inserir algun element.
 
 >Miro la taula creada per terminal
 
-![12](\heroku\img\12.png)
+![12](heroku/img/12.png)
 
 > Creo una nova taula
 
-![13](\heroku\img\13.png)
+![13](heroku/img/13.png)
 
 
 
 >Insereixo dades a la taula creada anteriorment
 
-![14](\heroku\img\14.png)
+![14](heroku/img/14.png)
 
 >Mostro les dades inserides a la taula creada per pgadmin3
 
-![15](\heroku\img\15.png)
+![15](heroku/img/15.png)
 
 3. Pgadmin3 es troba desfasat i fa un any va sortir la versió 4.
    Proveu d’instal.lar en un sistema Windows i proveu com funciona.
@@ -163,40 +163,40 @@ De nou comproveu la connexió i mireu les taules i podeu crear una 					taula o 
 >Primer s'ha de descarregar el programa de la pagina pgadmin.org, jo he
 >sel·leccionat la ultima versio d’aquest que es la 3.6
 
-![16](\heroku\img\16.PNG)
+![16](heroku/img/16.png)
 
 >Un cop cliques al l’enllaç et porta a la seguent pagina on tens 3
 >fitxers 2 son de informacio i el arxiu .exe es l’executable que
 >necessitem nosaltres.
 
-![17](\heroku\img\17.PNG)
+![17](heroku/img/17.png)
 
 >Un cop descarregat, l’instal·lacio es senzilla nomes s’ha de clicar
 >seguent tot el rato.
 
-![18](\heroku\img\18.PNG)
+![18](heroku/img/18.png)
 
-![19](\heroku\img\19.PNG)
+![19](heroku/img/19.png)
 
 
 
 > I un cop instal·lat l'executo
 
-![20](\heroku\img\20.PNG)
+![20](heroku/img/20.png)
 
  
 
 >Tal i com ja hem fet avans, s’ha de posar el nom de la base de dades,
 >usuari, port, host i password.
 
-![21](\heroku\img\21.PNG)
+![21](heroku/img/21.png)
 
 
 
 >I ja un cop clicat a guardar ja podrem accedir a la base de dades. Aquí
 >et monstruo un dels registres inserits a taules creades anteriorment.
 
-![22](\heroku\img\22.PNG)
+![22](heroku/img/22.png)
 
 
 
@@ -204,18 +204,18 @@ De nou comproveu la connexió i mireu les taules i podeu crear una 					taula o 
 
    La carrega del fitxer sql al pgadmin es senzilla, simplement, s’ha de sel·leccionar la base de dades i al menu superior clicar a ‘tools’  i clicar l’opcio ‘query tool’ on s’et obrira la pagina seguent i clicant al l’icona de la carpeta que es pot veure a la part superior esquerra s’et obrira la pagina filla que es veu damunt on simplement li has de passar el path de on tens el fitxer per a sel·leccionarlo i carregar-lo.
 
-   ![23](\heroku\img\23.PNG)
+   ![23](heroku/img/23.png)
 
 >Un cop carregat s’et obre com si fos un query que haguessis escrit
 >alli i simlemnt s’executa 
 
-![24](\heroku\img\24.PNG)
+![24](heroku/img/24.png)
 
 >I aquí et monstro que ha anat tot be perque al fer el select de la
 >taula que no existie avans de la carrega del fitxer i els registres
 >que tampoc existien hi son.
 
-![25](\heroku\img\25.PNG)
+![25](heroku/img/25.png)
 
 Per importar fitxers .sql amb una seqüència d’instruccions sql es pot
 fer de dues formes diferents. Des de el nostre sistema utilitzant l’ordre
@@ -229,7 +229,7 @@ això primer heu de copiar i crear un fitxer .sql amb les instruccions. Executeu
 
 
 
-![26](\heroku\img\26.png)
+![26](heroku/img/26.png)
 
 Per què seveix la instrucció `\! pwd` ? Per que pot ser útil ?
 
@@ -237,7 +237,7 @@ Per què seveix la instrucció `\! pwd` ? Per que pot ser útil ?
 >per aexectura una comanda dins del servidor. Per a la carrega de
 >arxius .sql desde path relatiu.
 
-![28](\heroku\img\28.png)
+![28](heroku/img/28.png)
 
 4. Instruccions psql
 
@@ -249,7 +249,7 @@ Per què seveix la instrucció `\! pwd` ? Per que pot ser útil ?
 
       >Aquesta comanda et diu: El nom de la base de dades, la codificacio de aquesta, el nom del host de la base de dades, el port de la base de dades i l’usuari amb el qual s’ha entrat a aquesta
 
-      ![27](\heroku\img\27.png)
+      ![27](heroku/img/27.png)
 
 5. Formats de sortida:
 
@@ -257,7 +257,7 @@ Per què seveix la instrucció `\! pwd` ? Per que pot ser útil ?
 
       Ex: `select * from productes where part = “Processador” \g /your_path.../productes.txt`
 
-      ![29](\heroku\img\29.png)
+      ![29](heroku/img/29.png)
 
    2. Mitjançant ordre \o: indicant la sortida de sentències d’ara endavant. ( tornar a executar \o per la sortida estandar)
 
@@ -273,11 +273,11 @@ Per què seveix la instrucció `\! pwd` ? Per que pot ser útil ?
 
       >Aquest, afegeix cada consuta a un fitxer que tu defineixes.
 
-      ![30](\heroku\img\30.png)
+      ![30](heroku/img/30.png)
 
       >  I aquest es el fitxer definit al qual es van afegint.
 
-      ![31](\heroku\img\31.png)
+      ![31](heroku/img/31.png)
 
    3. Especificar formats de sortida amb l’ordre pset. Els formats de sortida són aligned, unaligned, html i làtex ( especial interès aquests dos darrers).
 
@@ -291,23 +291,23 @@ Per què seveix la instrucció `\! pwd` ? Per que pot ser útil ?
 
       > Format html:
 
-      ![32](\heroku\img\32.png)
+      ![32](heroku/img/32.png)
 
       > Format latex:
 
-      ![33](\heroku\img\33.png)
+      ![33](heroku/img/33.png)
 
       > Format unaligned: 
 
-      ![34](\heroku\img\34.png)
+      ![34](heroku/img/34.png)
 
       > Format aligned: 
 
-      ![35](\heroku\img\35.png)
+      ![35](heroku/img/35.png)
 
       > Format wrapped :
 
-      ![36](\heroku\img\36.png)
+      ![36](heroku/img/36.png)
 
    ​    
 
@@ -500,32 +500,32 @@ Per què seveix la instrucció `\! pwd` ? Per que pot ser útil ?
     
          > Primer hauriem d'executar la seguent commanda per a instal·lar els paquets necessaris:
     
-         ![37](\heroku\img\37.png)
+         ![37](heroku/img/37.png)
     
          > Despres crearem la carperta on executarem l’instalacio i crearem un entorn:
 
-![38](\heroku\img\38.png)
+![38](heroku/img/38.png)
 
 			> Seguidament entrarem a la carpeta que sens ha creat dins al crear letorn i l’activarem i descrregarem el pgadmin4 amb la seguent comanda.
 
-![39](\heroku\img\39.png)
+![39](heroku/img/39.png)
 
 >Un cop descarregat procedirtem al’instalacio amb la seguent comanda
 
-![40](\heroku\img\40.png)
+![40](heroku/img/40.png)
 
 > I a la seguent carpeta crearem l’arxiu de configuracio per a poder
 > executar el pgadmin4.
 
-![41](\heroku\img\41.png)
+![41](heroku/img/41.png)
 
 > I executarem la seguent comanda per a fer correr el pgadmin:
 
-![42](\heroku\img\42.png)
+![42](heroku/img/42.png)
 
 > I ja tenim el pgamin executantse al nostre ubuntu 18.04
 
-![43](\heroku\img\43.png)
+![43](img\43.png)
 
 
 
